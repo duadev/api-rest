@@ -6,7 +6,6 @@ const userSchema = require('../models/user');
 //Post - Create a new user endpoint
 router.post('/users', (req, res) => {
     const user = userSchema(req.body);
-
     user
         .save()
         .then((data) => res.json(data))
@@ -49,7 +48,6 @@ router.delete('/users/:id', (req, res) => {
         .then((data) => res.json(data))
         .catch((err) => res.json(err));
 });
-
 
 
 module.exports = router;
