@@ -1,4 +1,3 @@
-const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
 const userSchema = require('../models/user');
@@ -48,6 +47,5 @@ router.delete('/users/:id', (req, res) => {
         .then((data) => res.json(data))
         .catch((err) => res.json(err));
 });
-
 
 module.exports = router;
