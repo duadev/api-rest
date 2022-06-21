@@ -9,6 +9,7 @@ const app = express();
 const port = process.env.PORT || 3500;
 
 //Middleware
+app.use(express.json());
 app.use('/api', userRoutes);
 
 //routes for the app
@@ -16,10 +17,11 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
+
 // Mongodb connection
 mongoose
-.connect(
-    process.env.MONGODB_URI)
+    .connect(
+        process.env.MONGODB_URI)
     .then(() => console.log('mongodb connected successfully'))
     .catch(err => console.log(err));
 
