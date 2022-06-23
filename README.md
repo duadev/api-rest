@@ -1,2 +1,2 @@
 # api-rest
-Create api rest with stactk mern mongo db, express Js, mongoose
+Create api rest with stactk mern mongo db, express Js, mongoose, cors
